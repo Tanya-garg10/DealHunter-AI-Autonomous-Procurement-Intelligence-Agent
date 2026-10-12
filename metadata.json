@@ -1,0 +1,6 @@
+{
+  "name": "DealHunter AI — Autonomous Procurement Intelligence Agent",
+  "description": "Autonomous procurement intelligence agent that compares vendor costs, evaluates feature fit, detects hidden risks, validates evidence, and generates explainable purchasing recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

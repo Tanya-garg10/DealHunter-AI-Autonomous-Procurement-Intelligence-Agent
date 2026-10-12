@@ -1,0 +1,256 @@
+{
+  "dataset_metadata": {
+    "version": "1.0.0",
+    "disclaimer": "ILLUSTRATIVE SAMPLE DATASET FOR HACKATHON BENCHMARKING. All vendor names, pricing structures, and specifications are explicitly fictional and intended solely for agent decision-making evaluation. Never treat as actual commercial market research.",
+    "last_updated": "2026-10-12T00:00:00Z"
+  },
+  "vendors": [
+    {
+      "id": "vendor_datasprout",
+      "name": "DataSprout Pro",
+      "tagline": "Frictionless starter database & events platform",
+      "tier": "Standard Pro",
+      "pricing": {
+        "billing_model": "base_plus_overage",
+        "base_monthly_fee": 49.0,
+        "included_units_per_month": 10000,
+        "overage_unit_cost": 0.015,
+        "unit_metric": "API Events / Operations",
+        "annual_discount_percentage": 10.0,
+        "setup_fee": 0.0,
+        "hidden_fees_detected": [
+          "Overage unit cost is 7.5x higher than market average ($0.015/event)",
+          "Data egress charges apply above 50GB ($0.09/GB)",
+          "Auto-renews for 12 months unless canceled 60 days prior"
+        ]
+      },
+      "capabilities": [
+        "REST API",
+        "SOC2 Type II",
+        "Webhook Alerts",
+        "Community Support",
+        "99.9% Uptime SLA",
+        "Automated Daily Backups"
+      ],
+      "supported_features": {
+        "rest_api": true,
+        "soc2": true,
+        "sso_saml": false,
+        "multi_region": false,
+        "dedicated_support": false,
+        "custom_rbac": false,
+        "audit_logs": true,
+        "automated_backups": true
+      },
+      "support_and_reliability": {
+        "support_tier": "Email & Community Discord (48h SLA response)",
+        "sla_uptime_percent": 99.9,
+        "status_page_url": "https://status.datasprout-fictional.io",
+        "reliability_score": 75.0
+      },
+      "contract_flexibility": {
+        "commitment": "Month-to-month or Annual",
+        "cancellation_notice_days": 60,
+        "auto_renewal": true,
+        "refund_policy": "No refunds for partial months",
+        "flexibility_score": 70.0
+      },
+      "evidence": {
+        "quality_rating": "verified",
+        "evidence_score": 88.0,
+        "source_name": "Official Self-Serve Pricing Page & Terms of Service",
+        "source_url": "https://datasprout-fictional.io/pricing-2026",
+        "retrieval_timestamp": "2026-08-15T14:22:00Z",
+        "pricing_verified": true,
+        "terms_verified": true,
+        "sample_flag": "illustrative_fixture",
+        "notes": "Pricing clearly published. Overages kick in sharply past 10,000 units."
+      }
+    },
+    {
+      "id": "vendor_apexcloud",
+      "name": "ApexCloud Enterprise",
+      "tagline": "Mission-critical, hardened enterprise operations platform",
+      "tier": "Enterprise Core",
+      "pricing": {
+        "billing_model": "base_plus_overage",
+        "base_monthly_fee": 299.0,
+        "included_units_per_month": 100000,
+        "overage_unit_cost": 0.002,
+        "unit_metric": "API Events / Operations",
+        "annual_discount_percentage": 15.0,
+        "setup_fee": 100.0,
+        "hidden_fees_detected": [
+          "Mandatory initial onboarding fee of $100 in first month"
+        ]
+      },
+      "capabilities": [
+        "REST API",
+        "SOC2 Type II",
+        "SSO / SAML Okta & AzureAD",
+        "Multi-Region Failover",
+        "Dedicated Slack Channel",
+        "Custom RBAC",
+        "99.99% Enterprise SLA",
+        "Real-time Audit Logs",
+        "Automated Hourly Backups"
+      ],
+      "supported_features": {
+        "rest_api": true,
+        "soc2": true,
+        "sso_saml": true,
+        "multi_region": true,
+        "dedicated_support": true,
+        "custom_rbac": true,
+        "audit_logs": true,
+        "automated_backups": true
+      },
+      "support_and_reliability": {
+        "support_tier": "24/7 Dedicated Slack Channel & 15-minute P1 SLA",
+        "sla_uptime_percent": 99.99,
+        "status_page_url": "https://status.apexcloud-fictional.com",
+        "reliability_score": 96.0
+      },
+      "contract_flexibility": {
+        "commitment": "Annual Agreement with 30-day out-clause",
+        "cancellation_notice_days": 30,
+        "auto_renewal": false,
+        "refund_policy": "Prorated refund upon 30-day written notice",
+        "flexibility_score": 88.0
+      },
+      "evidence": {
+        "quality_rating": "verified",
+        "evidence_score": 95.0,
+        "source_name": "Official Enterprise MSA & Security Compliance Portal",
+        "source_url": "https://apexcloud-fictional.com/legal/msa-v4",
+        "retrieval_timestamp": "2026-09-01T09:15:00Z",
+        "pricing_verified": true,
+        "terms_verified": true,
+        "sample_flag": "illustrative_fixture",
+        "notes": "Contractual uptime guarantees with financially backed service credits."
+      }
+    },
+    {
+      "id": "vendor_quickflux",
+      "name": "QuickFlux Analytics",
+      "tagline": "Agile real-time streaming with lean footprint",
+      "tier": "Growth Package",
+      "pricing": {
+        "billing_model": "base_plus_overage",
+        "base_monthly_fee": 99.0,
+        "included_units_per_month": 25000,
+        "overage_unit_cost": 0.008,
+        "unit_metric": "API Events / Operations",
+        "annual_discount_percentage": 5.0,
+        "setup_fee": 0.0,
+        "hidden_fees_detected": [
+          "Unverified pricing stability (terms subject to unannounced change)",
+          "No SLA credit policy published"
+        ]
+      },
+      "capabilities": [
+        "REST API",
+        "SOC2 Type II",
+        "Webhook Alerts",
+        "Email Support (Standard)",
+        "Audit Logs"
+      ],
+      "supported_features": {
+        "rest_api": true,
+        "soc2": true,
+        "sso_saml": false,
+        "multi_region": false,
+        "dedicated_support": false,
+        "custom_rbac": false,
+        "audit_logs": true,
+        "automated_backups": false
+      },
+      "support_and_reliability": {
+        "support_tier": "Standard Email (Best-effort response, ~24-72h)",
+        "sla_uptime_percent": 99.0,
+        "status_page_url": "https://quickflux-unverified-blog.io/status",
+        "reliability_score": 60.0
+      },
+      "contract_flexibility": {
+        "commitment": "Month-to-month",
+        "cancellation_notice_days": 15,
+        "auto_renewal": true,
+        "refund_policy": "No refund stated",
+        "flexibility_score": 65.0
+      },
+      "evidence": {
+        "quality_rating": "unverified",
+        "evidence_score": 42.0,
+        "source_name": "Community forum thread & promo blog post",
+        "source_url": "https://devcommunity-fictional.net/post/quickflux-2026-review",
+        "retrieval_timestamp": "2025-11-10T18:00:00Z",
+        "pricing_verified": false,
+        "terms_verified": false,
+        "sample_flag": "illustrative_fixture",
+        "notes": "WARNING: Incomplete evidence. Source is third-party forum post over 11 months old. Pricing and SLA cannot be confirmed without direct vendor contact."
+      }
+    },
+    {
+      "id": "vendor_omniscale",
+      "name": "OmniScale Cloud",
+      "tagline": "Scalable balanced infrastructure for high-growth tech teams",
+      "tier": "Professional Suite",
+      "pricing": {
+        "billing_model": "base_plus_overage",
+        "base_monthly_fee": 149.0,
+        "included_units_per_month": 45000,
+        "overage_unit_cost": 0.005,
+        "unit_metric": "API Events / Operations",
+        "annual_discount_percentage": 12.0,
+        "setup_fee": 50.0,
+        "hidden_fees_detected": [
+          "One-time account provisioning charge of $50"
+        ]
+      },
+      "capabilities": [
+        "REST API",
+        "SOC2 Type II",
+        "SSO / SAML Okta",
+        "Webhook Alerts",
+        "Priority Support",
+        "99.95% SLA",
+        "Automated Daily Backups",
+        "Audit Logs"
+      ],
+      "supported_features": {
+        "rest_api": true,
+        "soc2": true,
+        "sso_saml": true,
+        "multi_region": false,
+        "dedicated_support": false,
+        "custom_rbac": true,
+        "audit_logs": true,
+        "automated_backups": true
+      },
+      "support_and_reliability": {
+        "support_tier": "Business Hours Priority Support (4h SLA)",
+        "sla_uptime_percent": 99.95,
+        "status_page_url": "https://status.omniscale-fictional.com",
+        "reliability_score": 85.0
+      },
+      "contract_flexibility": {
+        "commitment": "Annual or Monthly (Quarterly cancellation)",
+        "cancellation_notice_days": 30,
+        "auto_renewal": false,
+        "refund_policy": "Prorated for annual plans",
+        "flexibility_score": 80.0
+      },
+      "evidence": {
+        "quality_rating": "verified",
+        "evidence_score": 90.0,
+        "source_name": "Verified Developer Documentation & Pricing Tier Card",
+        "source_url": "https://omniscale-fictional.com/docs/pricing-spec",
+        "retrieval_timestamp": "2026-09-15T11:45:00Z",
+        "pricing_verified": true,
+        "terms_verified": true,
+        "sample_flag": "illustrative_fixture",
+        "notes": "Verified vendor spec. Good balance between base price and included usage allowance."
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "project": "dealhunter-ai",
+  "organization": "neathack-2026",
+  "entire_version": "0.4.2",
+  "features": {
+    "checkpoints": true,
+    "trails": true,
+    "graph": true,
+    "brain": true
+  },
+  "agent_integration": {
+    "primary_agent": "codex",
+    "supported_agents": ["codex", "claude-code", "gemini-builder", "cursor"],
+    "continuous_memory": true
+  },
+  "tracked_checkpoints": [
+    {
+      "checkpoint_id": "chk_01_arch_models",
+      "commit": "eda60ed",
+      "description": "Initial DealHunter architecture, deterministic cost math models, and 11 unit tests",
+      "timestamp": "2026-10-12T10:31:37Z",
+      "decisions_recorded": 5
+    },
+    {
+      "checkpoint_id": "chk_02_fullstack_cfo",
+      "commit": "9bc7af5",
+      "description": "Full-stack Vite/Express app, cfo.ai business plan ($0.003 COGS), and demo script",
+      "timestamp": "2026-10-12T10:35:05Z",
+      "decisions_recorded": 7
+    },
+    {
+      "checkpoint_id": "chk_03_neatlogs_official",
+      "commit": "f71f7b6",
+      "description": "Neatlogs official SDK alignment, wrapGoogleGenAI, flushAll, and doctor probe UI",
+      "timestamp": "2026-10-12T10:39:11Z",
+      "decisions_recorded": 6
+    }
+  ],
+  "graph": {
+    "indexed_files": [
+      "agent.py",
+      "tools.py",
+      "models.py",
+      "server.ts",
+      "src/App.tsx",
+      "vendors.json"
+    ],
+    "estimated_tokens_saved": 42800,
+    "token_savings_percent": 68.4
+  }
+}

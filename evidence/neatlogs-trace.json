@@ -1,0 +1,138 @@
+{
+  "trace_metadata": {
+    "trace_id": "neatlogs_trace_dh_run_4969268858",
+    "mission_id": "dh_run_4969268858",
+    "timestamp": "2026-10-12T10:56:28.019042+00:00",
+    "agent": "DealHunter AI",
+    "status": "COMPLETED",
+    "neatlogs_connected": false
+  },
+  "execution_timeline": [
+    {
+      "step_id": "step_1",
+      "timestamp": "2026-10-12T10:56:28.017570+00:00",
+      "stage": "PLANNING",
+      "action": "Create Explicit Research Plan",
+      "tool_name": null,
+      "input_data": {
+        "mission": "Standard Team API Platform",
+        "budget": 250.0
+      },
+      "output_summary": "Formulated 5-stage procurement plan for goal: 'Standard Team API Platform'. Usage budget: 30,000 ops/mo @ $250.00/mo. Mandatory requirements: rest_api, soc2. Fault-tolerance injection flag: False.",
+      "status": "SUCCESS",
+      "duration_ms": 0.0,
+      "evidence_verified": true
+    },
+    {
+      "step_id": "step_2",
+      "timestamp": "2026-10-12T10:56:28.017844+00:00",
+      "stage": "RESEARCHING",
+      "action": "Lookup Vendors from Registry",
+      "tool_name": "search_vendors",
+      "input_data": {
+        "count": 4
+      },
+      "output_summary": "Successfully retrieved 4 vendors from registry (Primary lookup succeeded).",
+      "status": "SUCCESS",
+      "duration_ms": 0.26,
+      "evidence_verified": true
+    },
+    {
+      "step_id": "step_3",
+      "timestamp": "2026-10-12T10:56:28.017954+00:00",
+      "stage": "ANALYZING",
+      "action": "Audit Vendor: DataSprout Pro",
+      "tool_name": "score_vendor_deal",
+      "input_data": {
+        "vendor_id": "vendor_datasprout",
+        "usage": 30000
+      },
+      "output_summary": "Evaluated DataSprout Pro: Total Monthly $349.00, Annual TCO $4129.20, Feature Compatibility 100.0%, Evidence Quality 88.0%, Composite Score: 71.0/100. Eligibility: FAIL (Monthly cost ($349.00) exceeds budget ($250.00) by $99.00).",
+      "status": "INELIGIBLE",
+      "duration_ms": 0.08,
+      "evidence_verified": true
+    },
+    {
+      "step_id": "step_4",
+      "timestamp": "2026-10-12T10:56:28.018021+00:00",
+      "stage": "ANALYZING",
+      "action": "Audit Vendor: ApexCloud Enterprise",
+      "tool_name": "score_vendor_deal",
+      "input_data": {
+        "vendor_id": "vendor_apexcloud",
+        "usage": 30000
+      },
+      "output_summary": "Evaluated ApexCloud Enterprise: Total Monthly $299.00, Annual TCO $3149.80, Feature Compatibility 100.0%, Evidence Quality 95.0%, Composite Score: 80.7/100. Eligibility: FAIL (Monthly cost ($299.00) exceeds budget ($250.00) by $49.00).",
+      "status": "INELIGIBLE",
+      "duration_ms": 0.06,
+      "evidence_verified": true
+    },
+    {
+      "step_id": "step_5",
+      "timestamp": "2026-10-12T10:56:28.018082+00:00",
+      "stage": "ANALYZING",
+      "action": "Audit Vendor: QuickFlux Analytics",
+      "tool_name": "score_vendor_deal",
+      "input_data": {
+        "vendor_id": "vendor_quickflux",
+        "usage": 30000
+      },
+      "output_summary": "Evaluated QuickFlux Analytics: Total Monthly $139.00, Annual TCO $1608.60, Feature Compatibility 100.0%, Evidence Quality 0.0%, Composite Score: 72.2/100. Eligibility: PASS.",
+      "status": "SUCCESS",
+      "duration_ms": 0.06,
+      "evidence_verified": false
+    },
+    {
+      "step_id": "step_6",
+      "timestamp": "2026-10-12T10:56:28.018138+00:00",
+      "stage": "ANALYZING",
+      "action": "Audit Vendor: OmniScale Cloud",
+      "tool_name": "score_vendor_deal",
+      "input_data": {
+        "vendor_id": "vendor_omniscale",
+        "usage": 30000
+      },
+      "output_summary": "Evaluated OmniScale Cloud: Total Monthly $149.00, Annual TCO $1623.44, Feature Compatibility 100.0%, Evidence Quality 90.0%, Composite Score: 94.4/100. Eligibility: PASS.",
+      "status": "SUCCESS",
+      "duration_ms": 0.05,
+      "evidence_verified": true
+    },
+    {
+      "step_id": "step_7",
+      "timestamp": "2026-10-12T10:56:28.018980+00:00",
+      "stage": "ANALYZING",
+      "action": "Deal Regret Sensitivity Check",
+      "tool_name": "run_regret_sensitivity_check",
+      "input_data": {
+        "scenarios": 4,
+        "baseline_winner": "vendor_omniscale"
+      },
+      "output_summary": "Executed sensitivity stress-test across 4 usage scenarios. Detected 2 regret inflection point(s) where rankings shift.",
+      "status": "SUCCESS",
+      "duration_ms": 0.83,
+      "evidence_verified": true
+    },
+    {
+      "step_id": "step_8",
+      "timestamp": "2026-10-12T10:56:28.019032+00:00",
+      "stage": "VERIFYING",
+      "action": "Independent Verification & Constraint Audit",
+      "tool_name": null,
+      "input_data": {
+        "audit_check": "TCO_and_Mandatory_Constraints"
+      },
+      "output_summary": "Mathematical recalculation audit passed: True. Human Review Required: False. Audit flags: 1.",
+      "status": "SUCCESS",
+      "duration_ms": 0.04,
+      "evidence_verified": true
+    }
+  ],
+  "report_summary": {
+    "recommended_vendor": "OmniScale Cloud",
+    "is_human_review_required": false,
+    "reasons": [
+      "High growth sensitivity: Winner changes at +25%-50% usage due to steep overage fees. Recommend human review of 6-month projected volume."
+    ],
+    "total_steps": 8
+  }
+}
