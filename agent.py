@@ -31,7 +31,7 @@ from tools import (
 from config import (
     NEATLOGS_API_KEY,
     NEATLOGS_PROJECT_ID,
-    GEMINI_API_KEY,
+    FEATHERLESS_API_KEY,
     LLM_MODEL_NAME,
     EVIDENCE_DIR
 )

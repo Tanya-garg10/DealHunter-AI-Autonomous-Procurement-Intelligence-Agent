@@ -34,7 +34,7 @@ DealHunter AI helps startups and growing engineering teams make smarter, provabl
 - **Tracing & Observability:** [neatlogs](https://docs.neatlogs.com) integration streaming agent run IDs, tool calls, latencies, and verification steps
 - **Context & Checkpoint Management:** [Entire](https://entire.io) workflow preserving coding-agent context records and Git checkpoints
 - **Financial Model & Unit Economics:** [cfo.ai](https://cfo.ai/neathacks) business plan with 99% gross margin and 14-month runway model
-- **AI Reasoning:** Gemini 3.8 Flash (`@google/genai`) for executive synthesis and qualitative risk narratives
+- **AI Reasoning:** Featherless AI (OpenAI-compatible API) for executive synthesis and qualitative risk narratives
 
 ---
 
@@ -73,7 +73,8 @@ Copy `.env.example` to `.env`:
 cp .env.example .env
 ```
 Key variables:
-- `GEMINI_API_KEY`: API key for Gemini models (optional; system falls back smoothly if absent)
+- `FEATHERLESS_API_KEY`: API key for Featherless AI models (optional; system falls back smoothly if absent)
+- `LLM_MODEL_NAME`: Model name (default: `meta-llama/Meta-Llama-3.1-8B-Instruct`)
 - `NEATLOGS_API_KEY`: API key for live remote streaming to [neatlogs.com](https://neatlogs.com)
 - `NEATLOGS_PROJECT_ID`: Default project identifier (`dealhunter-neathack-2026`)
 

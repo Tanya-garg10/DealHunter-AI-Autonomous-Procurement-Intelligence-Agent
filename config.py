@@ -21,8 +21,8 @@ EVIDENCE_DIR = BASE_DIR / "evidence"
 # API keys and integrations
 NEATLOGS_API_KEY = os.getenv("NEATLOGS_API_KEY", "")
 NEATLOGS_PROJECT_ID = os.getenv("NEATLOGS_PROJECT_ID", "dealhunter-neathack-2026")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "gemini-3.8-flash")
+FEATHERLESS_API_KEY = os.getenv("FEATHERLESS_API_KEY", "")
+LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "meta-llama/Meta-Llama-3.1-8B-Instruct")
 
 # Default Evidence-Driven Scoring Weights (Section 4)
 DEFAULT_WEIGHTS = {

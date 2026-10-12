@@ -1993,7 +1993,7 @@ export default function App() {
                 <div className="bg-[#090D18] border border-[#18243A] p-4 rounded-lg">
                   <span className="text-[11px] text-slate-500 uppercase font-mono block">Variable COGS / Run</span>
                   <span className="text-xl font-bold font-mono text-emerald-400 mt-1 block">$0.0010</span>
-                  <span className="text-[10px] text-slate-500">Deterministic code + Gemini Flash</span>
+                  <span className="text-[10px] text-slate-500">Deterministic code + Featherless AI</span>
                 </div>
 
                 <div className="bg-[#090D18] border border-[#18243A] p-4 rounded-lg">

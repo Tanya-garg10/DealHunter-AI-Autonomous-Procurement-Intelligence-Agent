@@ -4,7 +4,6 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { createServer as createViteServer } from 'vite';
 import dotenv from 'dotenv';
-import { GoogleGenAI } from '@google/genai';
 import * as neatlogs from 'neatlogs';
 
 dotenv.config();
@@ -429,25 +428,31 @@ app.post('/api/run-agent', async (req: Request, res: Response) => {
 
   const agentStatus = isHumanReviewRequired ? 'NEEDS_REVIEW' : 'COMPLETED';
 
-  // Optional LLM synthesis via Gemini if API key is present
+  // Optional LLM synthesis via Featherless AI if API key is present
   let qualitativeRationale = '';
-  if (process.env.GEMINI_API_KEY && baselineWinner) {
+  if (process.env.FEATHERLESS_API_KEY && baselineWinner) {
     try {
-      let ai = new GoogleGenAI();
-      if (neatlogsInitialized) {
-        try {
-          ai = neatlogs.wrapGoogleGenAI(ai) as any;
-        } catch (_) {}
-      }
       const prompt = `You are DealHunter AI, a senior procurement intelligence agent for neatHack 2026.
 Explain in 2 concise, executive sentences why '${baselineWinner.vendor_name}' was selected as the winner over alternatives for the mission '${mission.goal}'.
 Mention that costs ($${baselineWinner.cost_breakdown.total_monthly_cost}/mo) and evidence quality (${baselineWinner.evidence_score}%) were verified deterministically.`;
-      
-      const response = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
-        contents: prompt,
+
+      const response = await fetch('https://api.featherless.ai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.FEATHERLESS_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: process.env.LLM_MODEL_NAME || 'meta-llama/Meta-Llama-3.1-8B-Instruct',
+          messages: [
+            { role: 'user', content: prompt },
+          ],
+          max_tokens: 150,
+        }),
       });
-      qualitativeRationale = response.text || '';
+
+      const data = await response.json();
+      qualitativeRationale = data.choices?.[0]?.message?.content || '';
     } catch (err) {
       qualitativeRationale = `'${baselineWinner.vendor_name}' achieves the optimal balance of verified SLA commitments and contained overage fees within your $${Number(mission.monthly_budget).toFixed(2)} monthly ceiling.`;
     }
